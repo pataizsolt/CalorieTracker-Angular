@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "CalorieTracker:build:production",
+            "firebaseProject": "calorietracker-1c6b0",
+            "firebaseHostingSite": "calorietracker-1c6b0"
+          }
         }
       }
     }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "calorietracker-1c6b0": {
+      "hosting": {
+        "CalorieTracker": [
+          "calorietracker-1c6b0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "calorietracker-1c6b0"
+  }
+}
