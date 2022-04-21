@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit, AfterViewInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, AfterViewInit {
 
   @Input() currentPage: string = '';
   @Output() selectedPage: EventEmitter<string> = new EventEmitter();
@@ -30,5 +30,4 @@ export class MenuComponent implements OnInit {
   close() {
     this.onCloseSidenav.emit(true);
   }
-
 }

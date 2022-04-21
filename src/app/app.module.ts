@@ -8,6 +8,8 @@ import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatMenuModule } from '@angular/material/menu';
 import { MenuComponent } from './common/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -24,7 +26,8 @@ import { MenuComponent } from './common/menu/menu.component';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    MatMenuModule
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [],
