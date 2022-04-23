@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, MaxLengthValidator } from '@angular/forms';
 import { Location } from '@angular/common';
 import { AuthService } from 'src/app/common/services/auth.service';
 import { Router } from '@angular/router';
@@ -13,9 +13,13 @@ export class RegisterComponent implements OnInit {
   signUpForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
-    rePassword: new FormControl('')
+    rePassword: new FormControl(''),
+    username: new FormControl(''),
+    weight: new FormControl(''),
+    height: new FormControl(''),
+    sex: new FormControl('')
   });
-
+  
   constructor(private router: Router, private location: Location, private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -34,5 +38,6 @@ export class RegisterComponent implements OnInit {
   goBack() {
     this.location.back();
   }
+
 
 }
