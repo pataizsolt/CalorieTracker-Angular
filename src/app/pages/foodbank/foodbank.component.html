@@ -1,1 +1,35 @@
-<p>foodbank works!</p>
+<mat-card>
+    <form [formGroup]="newFood" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label for="name">Name: </mat-label>
+            <input matInput type="text" formControlName="name" required/>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="calories">Calories: </mat-label>
+            <input matInput type="number" formControlName="calories" required/>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="carb">Carbohydrate: </mat-label>
+            <input matInput type="number" formControlName="carb" required/>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="fat">Fat: </mat-label>
+            <input matInput type="number" formControlName="fat" required/>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label for="protein">Protein: </mat-label>
+            <input matInput type="number" formControlName="protein" required/>
+        </mat-form-field>
+        <div>
+            <span class="buttons">
+                <button mat-raised-button color="primary" type="submit">New food</button>
+            </span>
+        </div>
+    </form>
+    <mat-list>
+        <mat-list-item *ngFor="let food of foods">
+            <p>{{food.id}} {{food.name}} {{food.calories}} {{food.carb}} {{food.fat}} {{food.protein}}</p>
+            <button (click)="delete(food.id)">Delete</button>
+        </mat-list-item>
+    </mat-list>
+</mat-card>

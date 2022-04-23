@@ -3,9 +3,13 @@
         <mat-icon>menu</mat-icon>
         <span>Foodbank</span>
     </a>
-    <a mat-list-item routerLink="/not-found" (click)="close()">
+    <a mat-list-item routerLink="/meallog" (click)="close()">
         <mat-icon>menu</mat-icon>
-        <span>Not Found</span>
+        <span>MealTracker</span>
+    </a>
+    <a mat-list-item routerLink="/profile" (click)="close()">
+        <mat-icon>menu</mat-icon>
+        <span>Profile</span>
     </a>
     <a mat-list-item routerLink="/login" (click)="close()" *ngIf="!(loggedInUser)">
         <mat-icon>menu</mat-icon>

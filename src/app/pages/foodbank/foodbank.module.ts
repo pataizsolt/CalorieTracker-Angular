@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { FoodbankRoutingModule } from './foodbank-routing.module';
 import { FoodbankComponent } from './foodbank.component';
+import { MaterialModule } from 'src/app/material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -11,7 +15,10 @@ import { FoodbankComponent } from './foodbank.component';
   ],
   imports: [
     CommonModule,
-    FoodbankRoutingModule
+    FoodbankRoutingModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class FoodbankModule { }

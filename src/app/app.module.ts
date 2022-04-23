@@ -16,6 +16,9 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire/compat';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateFormatPipe } from './common/pipes/date-format.pipe';
+
 
 
 
@@ -24,7 +27,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    DateFormatPipe
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     AngularFireModule.initializeApp(environment.firebase),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    MatDatepickerModule
     
   ],
   providers: [],

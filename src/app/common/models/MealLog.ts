@@ -1,13 +1,12 @@
+import { Food } from "./Food";
+
 export interface MealLog {
     id: string;
+    userid: string
     date: number;
-    food: {
-        id: string;
-        name: string;
-        calories: number;
-        carb: number;
-        fat: number;
-        protein: number;
-    }
+    calories: number;
+    carb: number;
+    fat: number;
+    protein: number;
     
 }
