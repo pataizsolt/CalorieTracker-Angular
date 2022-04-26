@@ -1,18 +1,20 @@
+<div class="main_component">
 <mat-card class="example-card">
-    <mat-card-title>{{username}}</mat-card-title>
-    <mat-card-content>
-      <p></p>
-      <p>Email: {{email}}</p>
-      <p>Height: {{height}}</p>
-      <p>Weight: {{weight}}</p>
-      <p>Username: {{username}}</p>
-      <p>Sex: {{sex}}</p>
-      <p>BMI: {{bmi}}</p>
-      
-
+    <mat-card-title>{{username}}'s profile:</mat-card-title>
+    <mat-card-content>      
+      <mat-list>
+        <mat-list-item>Email: {{email}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Height: {{height}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Weight: {{weight}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Username: {{username}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Sex: {{sex}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>BMI: {{bmi}}</mat-list-item>
+      </mat-list>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
   </mat-card>
+</div>

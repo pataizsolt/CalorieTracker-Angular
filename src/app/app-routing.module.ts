@@ -14,7 +14,10 @@ const routes: Routes = [
 
 { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterModule) },
 
-{ path: 'meallog', loadChildren: () => import('./pages/meallog/meallog.module').then(m => m.MeallogModule) },
+{ path: 'meallog', loadChildren: () => import('./pages/meallog/meallog.module').then(m => m.MeallogModule), canActivate: [AuthGuard]},
+
+{ path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule), canActivate: [AuthGuard]},
+
 {
   path: '',
   redirectTo: '/login',
@@ -22,7 +25,7 @@ const routes: Routes = [
 },
 
   
-{ path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule) },
+
 {
   path: '**',
   redirectTo: '/not-found'

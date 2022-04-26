@@ -15,4 +15,8 @@ a:hover, a:active {
 
 mat-sidenav {
     width: 250px;
+    height: 100%;
+}
+mat-sidenav-content{
+    height: 100%;
 }

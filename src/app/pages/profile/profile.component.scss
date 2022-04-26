@@ -1,0 +1,21 @@
+.div-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main_component {
+    height: 100vh;
+}
+
+mat-card{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 2em;
+    vertical-align:top;
+    width: fit-content;
+    height: fit-content;
+  }

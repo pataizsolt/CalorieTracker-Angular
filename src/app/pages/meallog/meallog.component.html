@@ -1,3 +1,5 @@
+<div class="main_component">
+  
 <mat-card>
   <form [formGroup]="newMealLog" (ngSubmit)="onSubmit()">
     <mat-form-field appearance="fill">
@@ -7,79 +9,84 @@
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-      <!--<mat-form-field>
-          <mat-label for="calories">Calories: </mat-label>
-          <input matInput type="number" formControlName="calories" required/>
-      </mat-form-field>
-      <mat-form-field>
-          <mat-label for="carb">Carbohydrate: </mat-label>
-          <input matInput type="number" formControlName="carb" required/>
-      </mat-form-field>
-      <mat-form-field>
-          <mat-label for="fat">Fat: </mat-label>
-          <input matInput type="number" formControlName="fat" required/>
-      </mat-form-field>
-      <mat-form-field >
-          <mat-label for="protein">Protein: </mat-label>
-          <input matInput type="number" formControlName="protein" required/>
-      </mat-form-field>-->
       <div>
           <span class="buttons">
-              <button mat-raised-button color="primary" type="submit">New food</button>
+              <button mat-raised-button color="primary" type="submit">Add new day</button>
           </span>
       </div>
   </form>
-  <mat-list>
-      <mat-list-item *ngFor="let food of mealLogs">
-          <p>{{food.date | date:'yyyy-MM-dd'}} {{food.calories}} {{food.carb}} {{food.fat}} {{food.protein}}</p>
-          <button (click)="delete(food.id)">Delete</button>
-      </mat-list-item>
-  </mat-list>
+</mat-card>
 
 
-  
+
+  <mat-card>
   <form [formGroup]="select" (ngSubmit)="onSubmit2()">
 <mat-form-field appearance="fill">
-  <mat-label>Favorite food</mat-label>
+  <mat-label>Edit date!</mat-label>
   <mat-select formControlName="id">
-    <mat-option *ngFor="let mealLog of mealLogs" [value]="mealLog.date" >
-      {{mealLog.date | date:'yyyy-MM-dd'}}
+    <mat-option *ngFor="let mealLog of mealLogSpecific" [value]="mealLog.date" >
+      
+      {{mealLog.date | date:'yyyy. MM. dd'}}
+      <!--{{mealLog.date | dateformat}}-->
     </mat-option>
   </mat-select>
 </mat-form-field>
+<br>
 <mat-form-field>
   <mat-label for="calories">Calories: </mat-label>
   <input matInput type="number" formControlName="calories" required/>
 </mat-form-field>
+<br>
 <mat-form-field>
   <mat-label for="carb">Carbohydrate: </mat-label>
   <input matInput type="number" formControlName="carb" required/>
 </mat-form-field>
+<br>
 <mat-form-field>
   <mat-label for="fat">Fat: </mat-label>
   <input matInput type="number" formControlName="fat" required/>
 </mat-form-field>
+<br>
 <mat-form-field >
   <mat-label for="protein">Protein: </mat-label>
   <input matInput type="number" formControlName="protein" required/>
 </mat-form-field>
+<br>
 <div>
   <span class="buttons">
-      <button mat-raised-button color="primary">Back</button>
+      <button mat-raised-button color="primary" type="submit">Edit your daily intake!</button>
   </span>
 </div>
 </form>
-<mat-list>
-  <mat-list-item *ngFor="let food of mealLogSpecific">
-      <p>{{food.date | date: 'yyyy-MM-dd'}} {{food.calories}} {{food.carb}} {{food.fat}} {{food.protein}}</p>
-      <button (click)="delete(food.id)">Delete</button>
-  </mat-list-item>
-</mat-list>
-
-
-
-
-
 </mat-card>
+<mat-card>
+  
+
+  <table mat-tableclass="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <th>Date</th>
+    <th>Calories</th>
+    <th>Carbohydrate</th>
+    <th>Fat</th>
+    <th>Protein</th>
+    <tr *ngFor="let mallog of mealLogSpecific">
+      <td>{{mallog.date | dateformat}}</td>
+      <td>{{mallog.calories}}</td>
+      <td>{{mallog.carb}}g</td>
+      <td>{{mallog.fat}}g</td>
+      <td>{{mallog.protein}}g</td>
+      <td><button (click)="delete(mallog.id)" mat-raised-button>Delete</button></td>
+    </tr>
+  
+  </table>
+  
+</mat-card>
+
+
+
 
   

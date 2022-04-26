@@ -4,19 +4,19 @@
         <span>Foodbank</span>
     </a>
     <a mat-list-item routerLink="/meallog" (click)="close()">
-        <mat-icon>menu</mat-icon>
+        <mat-icon>restaurant</mat-icon>
         <span>MealTracker</span>
     </a>
     <a mat-list-item routerLink="/profile" (click)="close()">
-        <mat-icon>menu</mat-icon>
+        <mat-icon>person</mat-icon>
         <span>Profile</span>
     </a>
     <a mat-list-item routerLink="/login" (click)="close()" *ngIf="!(loggedInUser)">
-        <mat-icon>menu</mat-icon>
+        <mat-icon>login</mat-icon>
         <span>Login</span>
     </a>
     <a mat-list-item routerLink="/register" (click)="close()" *ngIf="!(loggedInUser)">
-        <mat-icon>menu</mat-icon>
+        <mat-icon>assignment</mat-icon>
         <span>Register</span>
     </a>
     <a mat-list-item routerLink="/login" (click)="close(true)" *ngIf="loggedInUser">

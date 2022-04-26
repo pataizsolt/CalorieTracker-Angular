@@ -19,8 +19,8 @@ export class MeallogService {
     return this.angularFirestore.collection<MealLog>(this.collectionName).valueChanges();
   }
 
-  getSpecific(id: string){
-    return this.angularFirestore.collection<MealLog>(this.collectionName, ref => ref.where('id', '==', id).orderBy('date', 'asc')).valueChanges();
+  getSpecific(userid: string){
+    return this.angularFirestore.collection<MealLog>(this.collectionName, ref => ref.where('userid', '==', userid)).valueChanges();
   }
 
   getById(id: string) {

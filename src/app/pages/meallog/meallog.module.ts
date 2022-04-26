@@ -13,7 +13,8 @@ import { DateFormatPipe } from 'src/app/common/pipes/date-format.pipe';
 
 @NgModule({
   declarations: [
-    MeallogComponent
+    MeallogComponent,
+    DateFormatPipe
   ],
   imports: [
     CommonModule,

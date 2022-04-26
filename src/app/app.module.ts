@@ -17,7 +17,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire/compat';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { DateFormatPipe } from './common/pipes/date-format.pipe';
+
+
 
 
 
@@ -27,8 +28,7 @@ import { DateFormatPipe } from './common/pipes/date-format.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    DateFormatPipe
+    MenuComponent
   ],
   imports: [
     BrowserModule,
