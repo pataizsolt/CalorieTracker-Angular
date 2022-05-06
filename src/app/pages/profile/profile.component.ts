@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
   username!: string;
   sex!: string;
   bmi!: number;
-  
+
 
 
   constructor(private userService: UserService) { }
@@ -34,9 +34,9 @@ export class ProfileComponent implements OnInit {
         this.username = data?.username!;
         this.weight = data?.weight!;
         this.sex = data?.sex!;
-        this.bmi = this.weight/(this.height*this.height);
+        this.bmi = this.weight/((this.height/100)*(this.height/100));
     });
-    
+
   }
 
 }

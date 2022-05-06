@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
     height: new FormControl(''),
     sex: new FormControl('')
   });
-  
+
   constructor(private router: Router, private location: Location, private authService: AuthService, private userService: UserService) { }
 
   ngOnInit(): void {
@@ -45,6 +45,7 @@ export class RegisterComponent implements OnInit {
         };
         this.userService.create(user).then(_ => {
           console.log('User added successfully.');
+          this.router.navigateByUrl('/foodbank');
         }).catch(error => {
           console.error(error);
         })

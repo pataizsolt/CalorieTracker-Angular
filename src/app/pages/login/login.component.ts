@@ -25,6 +25,10 @@ export class LoginComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
   }
 
+  ngOncreate(): void{
+
+  }
+
   async login() {
     if(this.email.value === '' || this.password.value === ''){
       console.log('error');
@@ -37,12 +41,13 @@ export class LoginComponent implements OnInit, OnDestroy{
       }).catch(error => {
         console.error(error);
       });
+      await this.router.navigateByUrl('/foodbank');
     }
-    
+
   }
 
 
-  
+
 
   ngOnDestroy() {
     this.loadingSubscription?.unsubscribe();
